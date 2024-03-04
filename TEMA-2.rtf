@@ -1,0 +1,531 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Calibri-Bold;}{\f2\fnil\fcharset1 Segoe UI Symbol;}{\f3\fnil\fcharset128 ArialMT;}{\f4\fnil\fcharset0 Arial-BoldMT;}}
+{\colortbl ;\red89\green52\blue148;\red255\green154\blue0;\red0\green0\blue0;\red0\green0\blue255;\red0\green77\blue187;\red255\green255\blue255;\red192\green192\blue192;\red0\green255\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 TEMA 2 - \b\f1\fs32 Vari\'e1veis e Tipos de dados\par
+
+\pard\cf1\fs28 Habilidades\par
+\cf2\b0\f2\fs22\u9679?\f3  \cf3\f0 Compreender a fun\'e7\'e3o de uma vari\'e1vel e seu tratamento no contexto do PHP.\par
+
+\pard\sa200\sl276\slmult1\cf2\f2\u9679?\f3  \cf3\f0 Compreender os conceitos de tipagem de vari\'e1veis e seu funcionamento no c\'f3digo.\par
+
+\pard\qj O PHP que vamos estudar como j\'e1 mencionado, vai ser a vers\'e3o 6.0, na sintaxe procedural, toda linguagem de programa\'e7\'e3o tem a sua documenta\'e7\'e3o diante disso vamos falar sobre a documenta\'e7\'e3o do PHP, que \'e9 muito importante para n\'f3s programadores. Para acessar a documenta\'e7\'e3o do PHP vamos entrar nesse link {\cf0{\field{\*\fldinst{HYPERLINK https://www.php.net/ }}{\fldrslt{https://www.php.net/\ul0\cf0}}}}\f0\fs22 .\par
+Nele vamos encontrar as informa\'e7\'f5es atuais, dicas de novos comandos, express\'f5es, fun\'e7\'f5es e at\'e9 API, a dica \'e9 que toda vez que surgir uma d\'favida acesse esse site e procure sobre o que voc\'ea precisa.\par
+Na parte superior da tela \'e0 direita tem a caixa de procura, basta voc\'ea digitar o comando que voc\'ea tem d\'favida que o site vai lhe direcionar para uma ajuda objetiva e r\'e1pida.\par
+\par
+
+\pard\cf1\f3 2.1 \f0\fs26 Sintaxe do PHP\par
+
+\pard\qj\cf3\fs22 Como vimos no conte\'fado passado entendemos que a sintaxe \'e9 a organiza\'e7\'e3o de qualquer linguagem, agora vamos nos aprofundar mais, sobre a sintaxe do PHP. Para comentar \ul\b no PHP usamos // para uma \'fanica linha e /* coment\'e1rio em bloco */ \ulnone\b0 Exemplo de coment\'e1rio:\par
+\par
+// Este \'e9 um coment\'e1rio de uma linha em PHP.\par
+\par
+/*\par
+   Este \'e9 um coment\'e1rio\par
+   de v\'e1rias linhas em PHP.\par
+   Pode ocupar quantas linhas forem necess\'e1rias.\par
+*/\par
+\par
+
+\pard\cf0 Agora de uma maneira mais clara, estamos usando php com as tags de html, junto do\par
+
+\pard\qj seu escopo;\par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Ol\'e1 Mundo em PHP</title>\par
+    <style>\par
+        body \{\par
+            font-family: Arial, sans-serif;\par
+            background-color: #f0f0f0;\par
+            margin: 0;\par
+            padding: 0;\par
+            display: flex;\par
+            justify-content: center;\par
+            align-items: center;\par
+            height: 100vh;\par
+        \}\par
+        .container \{\par
+            text-align: center;\par
+        \}\par
+        h1 \{\par
+            color: #333;\par
+            font-size: 3rem;\par
+            margin-bottom: 20px;\par
+        \}\par
+        p \{\par
+            color: #666;\par
+            font-size: 1.2rem;\par
+        \}\par
+    </style>\par
+</head>\par
+<body>\par
+    <div class="container">\b\par
+        <?php\par
+            $mensagem = "Ol\'e1 Mundo! oppppa";\par
+            echo "<h1>$mensagem</h1>";\par
+        ?>\par
+\b0         <p>Este \'e9 um exemplo de p\'e1gina PHP estilizada com HTML e CSS.</p>\par
+    </div>\par
+</body>\par
+</html>\par
+\cf0\par
+\cf1\f3 2.2 \f0\fs26 Tipos de vari\'e1veis\par
+\cf3\fs22 Vari\'e1vel como vimos nas aulas de l\'f3gica \'e9 um local tempor\'e1rio, para guardar dados de v\'e1rios tipos, exemplo inteiro, decimal, texto e l\'f3gico. Agora vamos falar desses tipos s\'f3 usando o PHP. Os tipos de dados usados no PHP, \ul\b s\'e3o b\'e1sicos e compostos\ulnone\b0 . Para declarar uma vari\'e1vel no PHP, \ul\b temos que usar o $ do dinheiro sempre na frente do nome da vari\'e1vel\ulnone\b0 , lembrando que seguimos os exemplos b\'e1sicos para declarar qualquer tipo de vari\'e1vel.\par
+Vamos falar sobre os tipos de vari\'e1vel de dados b\'e1sicos;\par
+\par
+\b\f1 String\par
+\b0\f0 String \'e9 um tipo de vari\'e1vel que s\'f3 suporta texto, podendo ser uma letra uma palavra ou at\'e9 um texto, conhecida tamb\'e9m como caracter. S\'f3 que aqui no PHP \'e9 chamada string.\par
+\par
+\cf5\b <?php\par
+// Declara\'e7\'e3o e atribui\'e7\'e3o de uma vari\'e1vel de string.\par
+$nome = "Jo\'e3o";\par
+\par
+// Concatena\'e7\'e3o de strings usando o operador ".".\par
+$saudacao = "Ol\'e1, " . $nome . "! Bem-vindo!";\par
+\par
+// Interpola\'e7\'e3o de strings dentro de uma string delimitada por aspas duplas.\par
+$saudacao_interpolada = "Ol\'e1, $nome! Bem-vindo!";\par
+?>\par
+\b0\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Sauda\'e7\'e3o</title>\par
+</head>\par
+<body>\par
+    <h1>Sauda\'e7\'e3o</h1>\par
+    <p\b ><?php echo $saudacao; ?>\b0 </p>\par
+    <p>\b <?php echo $saudacao_interpolada; ?></\b0 p>\par
+</body>\par
+</html>\par
+\cf3\par
+
+\pard\cf0\b\f1 Inteiro\par
+
+\pard\qj\b0\f0 Inteiro ou tamb\'e9m chamado de int \'e9 um tipo de vari\'e1vel que s\'f3 recebe n\'fameros inteiros, n\'e3o aceita n\'fameros quebrados exemplo \{... -4 -3 -2 -1 0 1 2 3 4 ...\}.\par
+\par
+\cf5\b <?php\par
+// Declara\'e7\'e3o e atribui\'e7\'e3o de uma vari\'e1vel do tipo inteiro.\par
+$idade = 25;\par
+\par
+// Mensagem baseada na idade.\par
+if ($idade >= 18) \{\par
+    $mensagem = "Voc\'ea \'e9 maior de idade.";\par
+\} else \{\par
+    $mensagem = "Voc\'ea \'e9 menor de idade.";\par
+\}\par
+?>\par
+\b0\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Verifica\'e7\'e3o de Idade</title>\par
+</head>\par
+<body>\par
+    <h1>Verifica\'e7\'e3o de Idade</h1>\par
+    <p\b ><?php echo $mensagem; ?>\b0 </p>\par
+    <p>Sua idade: \b <?php echo $idade; ?>\b0 </p>\par
+</body>\par
+</html>\par
+\cf0\par
+
+\pard\b\f1 Float\par
+\b0\f0 Float \'e9 um tipo de vari\'e1vel que recebe n\'fameros inteiros e quebrados, conhecido como decimal. Tamb\'e9m falado ponto flutuante:\par
+\par
+\cf5\b <?php\par
+// Declara\'e7\'e3o e atribui\'e7\'e3o de uma vari\'e1vel do tipo float.\par
+$peso = 68.5;\par
+\par
+// Mensagem baseada no peso.\par
+if ($peso >= 70.0) \{\par
+    $mensagem = "Seu peso est\'e1 acima do recomendado.";\par
+\} elseif ($peso >= 50.0 && $peso < 70.0) \{\par
+    $mensagem = "Seu peso est\'e1 dentro do recomendado.";\par
+\} else \{\par
+    $mensagem = "Seu peso est\'e1 abaixo do recomendado.";\par
+\}\par
+?>\par
+\b0\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Verifica\'e7\'e3o de Peso</title>\par
+</head>\par
+<body>\par
+    <h1>Verifica\'e7\'e3o de Peso</h1>\par
+    <p\b ><?php echo $mensagem; ?>\b0 </p>\par
+    <p>Seu peso: \b <?php echo $peso; ?>\b0  kg</p>\par
+</body>\par
+</html>\par
+\cf0\par
+\b\f1 Boolean\par
+
+\pard\qj\b0\f0 Booleano ou l\'f3gico \'e9 um tipo de vari\'e1vel que recebe somente dois valores verdadeiro (true) e Falso (false), tamb\'e9m 1 para verdadeiro e 0 para falso.\par
+\par
+\cf5\b <?php\par
+// Declara\'e7\'e3o e atribui\'e7\'e3o de uma vari\'e1vel do tipo booleano.\par
+$temConta = true;\par
+\par
+// Mensagem baseada na vari\'e1vel booleana.\par
+if ($temConta) \{\par
+    $mensagem = "Voc\'ea possui uma conta cadastrada.";\par
+\} else \{\par
+    $mensagem = "Voc\'ea n\'e3o possui uma conta cadastrada.";\par
+\}\par
+?>\par
+\b0\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Verifica\'e7\'e3o de Conta</title>\par
+</head>\par
+<body>\par
+    <h1>Verifica\'e7\'e3o de Conta</h1>\par
+    <p>\b <?php echo $mensagem; ?>\b0 </p>\par
+</body>\par
+</html>\par
+\cf0\par
+
+\pard\b\f1 Tipos de vari\'e1veis compostos\par
+Array\par
+
+\pard\qj\b0\f0 Um array \'e9 um tipo de vari\'e1vel que pode armazenar mais de um valor ao mesmo tempo, possui um identificador que chamamos de \'edndice.\par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Exemplo de Array com HTML</title>\par
+</head>\par
+<body>\par
+    <h1>Lista de Frutas</h1>\par
+\par
+\b     <?php\par
+    // Criando um array de frutas.\par
+    $frutas = array("Ma\'e7\'e3", "Banana", "Laranja", "Morango", "Abacaxi");\par
+\par
+    // Acessando elementos do array usando \'edndices.\par
+    echo "<p>A primeira fruta \'e9: " . $frutas[0] . "</p>";\par
+    echo "<p>A segunda fruta \'e9: " . $frutas[1] . "</p>";\par
+\par
+    // Adicionando um novo elemento ao array.\par
+    $frutas[] = "Uva";\par
+\par
+    // Exibindo o array atualizado com print_r.\par
+    echo "<p>Lista de frutas atualizada: </p>";\par
+    echo "<pre>";\par
+    print_r($frutas);\par
+    echo "</pre>";\par
+    ?>\par
+\b0 </body>\par
+</html>\par
+\cf0\par
+O elemento <pre> em HTML (preformatado) \'e9 \'fatil quando voc\'ea deseja exibir texto formatado exatamente como est\'e1 no c\'f3digo-fonte, respeitando espa\'e7os em branco e quebras de linha. Isso \'e9 particularmente \'fatil ao exibir conte\'fado de arrays usando a fun\'e7\'e3o print_r(), pois o <pre> preserva a formata\'e7\'e3o do array e o torna mais leg\'edvel.\par
+\par
+Sem o uso do <pre>, o texto gerado pela fun\'e7\'e3o print_r() seria exibido em uma \'fanica linha, o que poderia dificultar a leitura e compreens\'e3o, especialmente em arrays com m\'faltiplos elementos.\par
+\par
+
+\pard\b\f1 Objeto\par
+
+\pard\qj\b0\f0 Objeto \'e9 um tipo de vari\'e1vel que recebe valores de classes, usado no paradigma POO, que vamos estudar em outro m\'f3dulo, segue um exemplo de como instanciar uma vari\'e1vel.\par
+\par
+Vamos supor que temos uma classe chamada Pessoa com os atributos nome e idade, e um m\'e9todo apresentar() que exibe uma mensagem de apresenta\'e7\'e3o da pessoa:\par
+\par
+\cf5\b <?php\par
+// Defini\'e7\'e3o da classe Pessoa\par
+class Pessoa \{\par
+    public $nome;\par
+    public $idade;\par
+    \par
+    public function apresentar() \{\par
+        return "Ol\'e1! Meu nome \'e9 \{$this->nome\} e tenho \{$this->idade\} anos.";\par
+    \}\par
+\}\par
+\par
+// Instanciando um objeto da classe Pessoa\par
+$pessoa = new Pessoa();\par
+$pessoa->nome = "Jo\'e3o";\par
+$pessoa->idade = 30;\par
+?>\par
+\b0\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Exemplo de Objeto com HTML</title>\par
+</head>\par
+<body>\par
+    <h1>Apresenta\'e7\'e3o da Pessoa</h1>\par
+    <p>\b <?php echo $pessoa->apresentar(); ?>\b0 </p>\par
+</body>\par
+</html>\par
+\par
+\cf0 Neste exemplo, definimos a classe Pessoa com os atributos nome e idade, e o m\'e9todo apresentar() que retorna uma mensagem com esses atributos.\par
+\par
+Em seguida, instanciamos um objeto da classe Pessoa usando o operador new, atribu\'edmos valores aos seus atributos e, por fim, utilizamos o m\'e9todo apresentar() para exibir uma mensagem de apresenta\'e7\'e3o no HTML.\par
+\par
+\cf1\b\f4 2.2 \b0\f0\fs26 Comando de exibi\'e7\'e3o print e echo\par
+\par
+
+\pard\cf0\b\f1\fs22 Print\par
+
+\pard\qj\b0\f0 Comando para exibir uma string na tela, por n\'e3o ser uma fun\'e7\'e3o real n\'e3o precisa usar par\'eanteses com ele.\par
+\par
+
+\pard\b\f1 Echo\par
+\b0\f0 Comando echo tem a mesma fun\'e7\'e3o do print, sendo o mais usado quando usamos\par
+
+\pard\qj o PHP, sendo assim ele tamb\'e9m n\'e3o \'e9 uma fun\'e7\'e3o real, n\'e3o precisa usar par\'eanteses.\par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Exemplo de Print e Echo com HTML</title>\par
+</head>\par
+<body>\par
+\b     <?php\par
+    // Defini\'e7\'e3o de uma vari\'e1vel\par
+    $mensagem = "Ol\'e1, mundo!";?>\par
+\b0     Usando print para imprimir a mensagem: \par
+    \b <?php print $mensagem;?>\b0 <br>\par
+    Usando echo para imprimir a mesma mensagem:\b\par
+    <?php echo $mensagem;?>\par
+\b0  </body>\par
+</html>\par
+\cf0\par
+
+\pard\cf1\b\f4 2.3 \b0\f0\fs26 Tipos de dados com fun\'e7\'f5es ambiente\par
+
+\pard\qj\cf3\fs22 Fun\'e7\'f5es s\'e3o comandos feitos pelo desenvolvedor, criando uma esp\'e9cie de rotinas, ao chamar essas rotinas ser\'e1 executado o conjunto todo. Podemos tamb\'e9m ter uma fun\'e7\'e3o da pr\'f3pria linguagem que chamamos de fun\'e7\'e3o de ambiente.\par
+\b\f1\par
+Exemplo de fun\'e7\'e3o ambiente:\par
+\b0\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Exemplo de PHP com HTML</title>\par
+</head>\par
+<body>\par
+    <h1>Manipula\'e7\'e3o de Strings e Data</h1>\par
+\par
+\b     <?php\par
+    // String de exemplo\par
+    $texto = "Oi, Mundo!";\par
+\par
+    // Exibindo o comprimento da string\par
+    $comprimento = strlen($texto);\par
+    echo "<p>Comprimento da string: $comprimento</p>";\par
+\par
+    // Convertendo a string para min\'fasculas\par
+    $minusculas = strtolower($texto);\par
+    echo "<p>String em min\'fasculas: $minusculas</p>";\par
+\par
+    // Convertendo a string para mai\'fasculas\par
+    $maiusculas = strtoupper($texto);\par
+    echo "<p>String em mai\'fasculas: $maiusculas</p>";\par
+\par
+    // Substituindo parte da string\par
+    $nova_string = str_replace("Mundo", "Planeta", $texto);\par
+    echo "<p>String com substitui\'e7\'e3o: $nova_string</p>";\par
+\par
+    ?>\par
+\b0 </body>\par
+</html>\par
+\cf6\f4\par
+
+\pard\cf1\b 2.4 \b0\f0\fs26 Concatena\'e7\'e3o\par
+\cf3\fs22 Este elemento \'e9 muito usado em qualquer linguagem de programa\'e7\'e3o, sua finalidade\par
+\'e9 unir um conjunto de string, para exibir na tela. Usamos o ponto (.) para concatenar no PHP.\par
+
+\pard\qj Segue um exemplo:\par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Exemplo de Concatena\'e7\'e3o de Strings em PHP</title>\par
+</head>\par
+<body>\par
+\b     <?php\par
+    // Definindo as vari\'e1veis\par
+    $aluno = "Jo\'e3o";\par
+    $curso = "Programa\'e7\'e3o";\par
+\par
+    // Concatenando as strings para formar uma mensagem\par
+    $mensagem = "O aluno " . $aluno . " est\'e1 matriculado no curso de " . $curso . ".";\par
+    \par
+    // Exibindo a mensagem\par
+    echo "<p>$mensagem</p>";\par
+    ?>\par
+\b0 </body>\par
+</html>\par
+\cf3\par
+
+\pard\cf1\b\f4 2.5 \b0\f0\fs26 Convers\'e3o de dados\par
+
+\pard\qj\cf3\fs22 As vari\'e1veis declaradas no PHP, n\'e3o tem logo na sua cria\'e7\'e3o um tipo de dados espec\'edfico ela vai se adaptar ou virar um tipo de dados conforme os dados que se atribui a ela, isso vale tamb\'e9m para vari\'e1veis que vem derivadas de outras, chamamos de coer\'e7\'e3o.\par
+Veja alguns exemplos:\par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Manipula\'e7\'e3o de Tipos de Dados em PHP</title>\par
+</head>\par
+<body>\par
+    <h2>Manipula\'e7\'e3o de Tipos de Dados em PHP</h2>\par
+\par
+    \b <?php\par
+    // Inicializando uma vari\'e1vel como inteiro\par
+    $valor = 10;\par
+\par
+    // Exibindo informa\'e7\'f5es sobre a vari\'e1vel antes da convers\'e3o\par
+    echo "<p><strong>Antes da Convers\'e3o:</strong></p>";\par
+    echo "<p>Valor: $valor</p>";\par
+    echo "<p>Tipo de Dados: " . gettype($valor) . "</p>";\par
+\par
+    // Convertendo a vari\'e1vel para string usando settype\par
+    settype($valor, "string");\par
+\par
+    // Exibindo informa\'e7\'f5es sobre a vari\'e1vel depois da convers\'e3o\par
+    echo "<p><strong>Depois da Convers\'e3o:</strong></p>";\par
+    echo "<p>Valor: $valor</p>";\par
+    echo "<p>Tipo de Dados: " . gettype($valor) . "</p>";\par
+\par
+    // Exibindo informa\'e7\'f5es detalhadas sobre a vari\'e1vel usando var_dump\par
+    echo "<p><strong>Informa\'e7\'f5es Detalhadas:</strong></p>";\par
+    var_dump($valor);\par
+    ?>\par
+\b0 </body>\par
+</html>\par
+\cf3\par
+\b Neste exemplo:\par
+\b0\par
+Inicializamos a vari\'e1vel $valor como um inteiro com o valor 10.\par
+Usamos gettype para obter o tipo de dados da vari\'e1vel antes e depois da convers\'e3o.\par
+Usamos settype para converter a vari\'e1vel para string.\par
+Finalmente, usamos var_dump para exibir informa\'e7\'f5es detalhadas sobre a vari\'e1vel.\par
+\par
+Convertendo o resultado float para um valor inteiro. \par
+\par
+\cf5 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Divis\'e3o Inteira em PHP</title>\par
+</head>\par
+<body>\par
+    <h2>Divis\'e3o Inteira em PHP</h2>\par
+\b     <?php\par
+    // Calculando a divis\'e3o entre 5 e 3\par
+    $resultado = 5 / 3;\par
+\tab $resultado_formatado = number_format($resultado, 2);\par
+\tab echo "<p>Resultado da divis\'e3o entre 5 e 3: $resultado_formatado</p>";\par
+\par
+    // Convertendo o resultado para inteiro\par
+    settype($resultado, "integer");\par
+\par
+    // Exibindo o resultado da divis\'e3o inteira\par
+    echo "<p>Resultado da divis\'e3o inteira entre 5 e 3: $resultado</p>";\par
+    ?>\par
+\b0 </body>\par
+</html>\par
+\cf3\par
+Neste exemplo, a divis\'e3o entre 5 e 3 resultar\'e1 em um n\'famero decimal. Em seguida, usamos settype para converter esse resultado para um valor inteiro, resultando em uma divis\'e3o inteira. \par
+\par
+
+\pard\cf1\b\f4 2.6 \b0\f0\fs26 Tipos de erros\par
+
+\pard\qj\cf3\fs22 Erros de l\'f3gica \'e9 o mais comum entre os desenvolvedores, quando isso acontece \'e9 quando voc\'ea e a m\'e1quina n\'e3o consegue ter o mesmo pensamento, nesse caso \'e9 bom descansar a mente e depois voltar a programar.\par
+Outro erro comum \'e9 o de sintaxe, quando o programador digita errado na tela, nesse caso vai aparecer essa mensagem.\par
+\par
+\b\f1 Parse error\b0\f0 : syntax error, unexpected '$idade' (T_VARIABLE), expecting ';' or ',' in \b\f1 C:\\xampp\\htdocs\\aula02\\index.php \b0\f0 on line \b\f1 16\par
+\par
+\b0\f0 Veja que \ldblquote Parse error: Syntax\rdblquote , vai ajudar voc\'ea entender que foi digitado um comando errado que n\'e3o existe, no final dessa mensagem est\'e1 aparecendo \ldblquote line 16\rdblquote  significa que o problema est\'e1 na linha 16.\par
+\cf6\f4\par
+
+\pard\cf3\f0 Outros erros que v\'e3o aparecer na sua aplica\'e7\'e3o.\par
+
+\pard\qj\b\f1\par
+\f0\fs18 Constante               \tab\tab | Descri\'e7\'e3o\par
+------------------------------------------------------------------------\par
+\highlight7 E_ALL                  \tab\tab | Todos os erros e avisos s\'e3o exibidos.\par
+\highlight8 E_ERROR\tab\tab\tab | Erros fatais de tempo de execu\'e7\'e3o. Eles indicam erros que n\'e3o podem ser recuperados, \tab\tab\tab como um problema de aloca\'e7\'e3o de mem\'f3ria.\par
+\highlight7 E_RECOVERABLE_ERROR     | Erro fatal capt\'e1vel. Indica que ocorreu um erro provavelmente perigoso, mas n\'e3o deixou a \tab\tab\tab Engine em um estado inst\'e1vel.\par
+\highlight8 E_WARNING               \tab | Avisos em tempo de execu\'e7\'e3o (erros n\'e3o fatais). A execu\'e7\'e3o do script n\'e3o \'e9 interrompida.\par
+\highlight7 E_PARSE                 \tab\tab | Erros de parse em tempo de compila\'e7\'e3o. Os erros de parse devem ser gerados apenas \tab\tab\tab pelo parser.\par
+\highlight8 E_NOTICE                \tab\tab | Notifica\'e7\'e3o de tempo de execu\'e7\'e3o. Indica que o script encontrou algo que poderia indicar \tab\tab\tab um erro, mas tamb\'e9m poderia ocorrer no curso normal da execu\'e7\'e3o de um script.\cf6\b0\par
+\highlight0\f4\fs22\par
+\cf0 ATIVIDADES:\par
+\par
+1. Liste e explique brevemente os tipos de vari\'e1veis b\'e1sicas no PHP, incluindo\par
+string, inteiro, float e boolean.\par
+2. O que s\'e3o vari\'e1veis compostas em PHP? D\'ea exemplos de quando e por que voc\'ea\par
+usaria arrays e objetos.\par
+3. Explique as principais diferen\'e7as entre os comandos de exibi\'e7\'e3o "print" e\par
+"echo" no PHP. Em que situa\'e7\'f5es voc\'ea escolheria um em vez do outro?\par
+\par
+4. Cite dois tipos de erros comuns na programa\'e7\'e3o mencionados no texto e\par
+explique brevemente cada um deles.\par
+5. O que \'e9 a vari\'e1vel de ambiente "REMOTE_USER" e em que contexto ela pode\par
+ser \'fatil para um desenvolvedor PHP?\par
+6. Quais os tipos b\'e1sicos de vari\'e1veis que temos no PHP?\par
+7. O que \'e9 concatenar?\par
+8. Descreva a diferen\'e7a entre um erro de l\'f3gica e um erro de sintaxe em\par
+programa\'e7\'e3o, e como voc\'ea abordaria cada um deles durante o desenvolvimento de um\par
+programa.\par
+9. Explique a import\'e2ncia da documenta\'e7\'e3o oficial do PHP, e forne\'e7a um exemplo\par
+de como voc\'ea a utilizaria para encontrar informa\'e7\'f5es sobre uma fun\'e7\'e3o espec\'edfica.\par
+10. Qual \'e9 a fun\'e7\'e3o de uma vari\'e1vel?\par
+\par
+---------------------------------------------------------------------------------------------------------\par
+\cf6\par
+\cf0 1. Os tipos de vari\'e1veis b\'e1sicas no PHP s\'e3o:\par
+   - **String**: Vari\'e1vel que armazena texto.\par
+   - **Inteiro**: Vari\'e1vel que armazena n\'fameros inteiros.\par
+   - **Float**: Vari\'e1vel que armazena n\'fameros decimais.\par
+   - **Boolean**: Vari\'e1vel que armazena valores verdadeiro (true) ou falso (false).\par
+\par
+2. Vari\'e1veis compostas em PHP s\'e3o estruturas que podem armazenar m\'faltiplos valores. Um exemplo s\'e3o os arrays, que podem conter uma lista de elementos do mesmo tipo. Por exemplo, um array pode armazenar uma lista de n\'fameros ou uma lista de nomes. J\'e1 os objetos s\'e3o inst\'e2ncias de classes que podem conter propriedades e m\'e9todos. Eles s\'e3o \'fateis para modelar entidades complexas e definir comportamentos espec\'edficos para essas entidades.\par
+\par
+3. As principais diferen\'e7as entre os comandos de exibi\'e7\'e3o "print" e "echo" no PHP s\'e3o:\par
+   - **Print**: \'c9 uma constru\'e7\'e3o da linguagem, n\'e3o uma fun\'e7\'e3o. Pode imprimir uma ou mais express\'f5es e sempre retorna 1.\par
+   - **Echo**: \'c9 uma fun\'e7\'e3o que pode imprimir uma ou mais express\'f5es e n\'e3o tem valor de retorno.\par
+\par
+4. Dois tipos de erros comuns mencionados no texto s\'e3o:\par
+   - **Erro de l\'f3gica**: Ocasionado quando a l\'f3gica do programa n\'e3o est\'e1 correta, levando a resultados inesperados ou incorretos.\par
+   - **Erro de sintaxe**: Ocasionado por erros de digita\'e7\'e3o ou estrutura\'e7\'e3o incorreta do c\'f3digo, resultando em falhas na interpreta\'e7\'e3o pelo interpretador da linguagem.\par
+\par
+5. A vari\'e1vel de ambiente "REMOTE_USER" cont\'e9m o nome de usu\'e1rio fornecido pelo usu\'e1rio na autentica\'e7\'e3o HTTP. Ela pode ser \'fatil para um desenvolvedor PHP quando \'e9 necess\'e1rio acessar informa\'e7\'f5es sobre o usu\'e1rio autenticado em um ambiente de autentica\'e7\'e3o baseado na web.\par
+\par
+6. Os tipos b\'e1sicos de vari\'e1veis no PHP s\'e3o: String, Inteiro, Float e Boolean.\par
+\par
+7. Concatenar \'e9 o processo de unir duas ou mais strings em uma \'fanica string. No PHP, isso \'e9 feito usando o operador de concatena\'e7\'e3o ".", que junta os valores das vari\'e1veis ou strings.\par
+\par
+8. Um erro de l\'f3gica ocorre quando a l\'f3gica do programa n\'e3o est\'e1 correta, resultando em comportamento inesperado. Para corrigir esse tipo de erro, \'e9 necess\'e1rio revisar e ajustar a l\'f3gica do c\'f3digo. Um erro de sintaxe ocorre quando o c\'f3digo n\'e3o est\'e1 estruturado corretamente e viola as regras gramaticais da linguagem de programa\'e7\'e3o. Para corrigir esse tipo de erro, \'e9 necess\'e1rio identificar e corrigir os erros de digita\'e7\'e3o ou a estrutura incorreta do c\'f3digo.\par
+\par
+9. A documenta\'e7\'e3o oficial do PHP \'e9 importante para os desenvolvedores, pois fornece informa\'e7\'f5es detalhadas sobre os recursos da linguagem, fun\'e7\'f5es, classes e m\'e9todos dispon\'edveis. Um exemplo de como utiliz\'e1-la seria acessar o site oficial do PHP em {{\field{\*\fldinst{HYPERLINK https://www.php.net/ }}{\fldrslt{https://www.php.net/\ul0\cf0}}}}\f4\fs22  e usar a caixa de pesquisa para encontrar informa\'e7\'f5es sobre uma fun\'e7\'e3o espec\'edfica, como "strlen". Isso fornecer\'e1 a documenta\'e7\'e3o oficial da fun\'e7\'e3o `strlen` com descri\'e7\'e3o, par\'e2metros e exemplos de uso.\par
+\par
+10. A fun\'e7\'e3o de uma vari\'e1vel \'e9 armazenar e manipular dados dentro de um programa. Elas permitem que os desenvolvedores armazenem informa\'e7\'f5es tempor\'e1rias ou din\'e2micas durante a execu\'e7\'e3o do programa, facilitando o processamento e a intera\'e7\'e3o com os dados.\par
+}
+ 
