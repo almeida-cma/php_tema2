@@ -1,4 +1,4 @@
-Criar os 12 scripts destacados em cor "azul" no arquivo TEMA-2.rtf conform abaixo informado:<br>
+Criar os 12 scripts destacados em cor "azul" no arquivo TEMA-2.rtf conforme abaixo informado:<br>
 
 ex1.php: aplicação para apresentar o exemplo "Olá, mundo!"<br>
 ex2.php: concatenação de strings<br>
