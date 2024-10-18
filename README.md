@@ -16,3 +16,4 @@ ex12.php: Usando settype para apresentar divisão com valor inteiro<br>
 Preencher o formulário com os scripts postados no seu repositório com nome: "PHP_04-03"
 https://almeida-cma.github.io/receber/
 
+Extra: www.educolorir.com/crosswords/php_variveis_e_tipos-221abe7f504ad1077abeae763d7a0922
